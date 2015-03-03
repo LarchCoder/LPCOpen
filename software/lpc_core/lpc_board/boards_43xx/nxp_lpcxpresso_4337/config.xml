@@ -1,0 +1,16 @@
+<LPCOpenCfg>
+	<symbol name="prjIgnoreList" value="misc/gpdma_speed|misc/iperf_server|misc/lpcspifilib|misc/spifilib_tst|misc/sdmmc_speed|misc/sct_apps/sct_blinky|misc/sct_apps/sct_simplematch|misc/sct_apps/sct_trafficlight|periph/periph_hsadc|${prjIgnoreList}"/>
+	<symbol name="varMemTarget"  value="iflash" options="default"/>
+	<template section="filelist" name="${varBoardLibName}" tool="xpresso">
+		<import src="${prjDestToRoot}/${prjBoardPath}" dest="src">
+			<copy>../../board_common/lpc_phy_smsc87x0.c</copy>
+			<copy>../../board_common/wm8904.c</copy>
+			<copy>../../board_common/lcd_st7565s.c</copy>
+		</import>
+		<import src="${prjDestToRoot}/${prjBoardPath}" dest="inc">
+			<copy>../../board_common/lpc_phy.h</copy>
+			<copy>../../board_common/wm8904.h</copy>
+			<copy>../../board_common/lcd_st7565s.h</copy>
+		</import>
+	</template>
+</LPCOpenCfg>

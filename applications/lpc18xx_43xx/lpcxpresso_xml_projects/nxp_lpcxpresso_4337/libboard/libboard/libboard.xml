@@ -1,0 +1,62 @@
+<project xmlns:xi="http://www.w3.org/2001/XInclude" type="Static library" name="lpc_board_nxp_lpcxpresso_4337" chip="LPC4337" vendor="NXP">
+	<filelist name="lpc_board_nxp_lpcxpresso_4337">
+		<import name="lpc_board_nxp_lpcxpresso_4337_src" src="../../../../../../software/lpc_core/lpc_board/boards_43xx/nxp_lpcxpresso_4337" dest="src">
+			<include>*.c</include>
+		</import>
+		<import name="lpc_board_nxp_lpcxpresso_4337_inc" src="../../../../../../software/lpc_core/lpc_board/boards_43xx/nxp_lpcxpresso_4337" dest="inc">
+			<include>*.h</include>
+		</import>
+		<import name="lpc_board_nxp_lpcxpresso_4337_src1" src="../../../../../../software/lpc_core/lpc_board/boards_43xx/nxp_lpcxpresso_4337" dest="src">
+			<copy>../../board_common/retarget.h</copy>
+		</import>
+		<import name="lpc_board_nxp_lpcxpresso_4337_inc1" src="../../../../../../software/lpc_core/lpc_board/boards_43xx/nxp_lpcxpresso_4337" dest="inc">
+			<copy>../../board_common/board_api.h</copy>
+		</import>
+		<import src="../../../../../../software/lpc_core/lpc_board/boards_43xx/nxp_lpcxpresso_4337" dest="src">
+			<copy>../../board_common/lpc_phy_smsc87x0.c</copy>
+			<copy>../../board_common/wm8904.c</copy>
+			<copy>../../board_common/lcd_st7565s.c</copy>
+		</import>
+		<import src="../../../../../../software/lpc_core/lpc_board/boards_43xx/nxp_lpcxpresso_4337" dest="inc">
+			<copy>../../board_common/lpc_phy.h</copy>
+			<copy>../../board_common/wm8904.h</copy>
+			<copy>../../board_common/lcd_st7565s.h</copy>
+		</import>
+	</filelist>
+	<cfglist name="lpc_board_nxp_lpcxpresso_4337">
+		<setting name="lpc_board_nxp_lpcxpresso_4337_cdef" id="compiler.def">
+			<value>__USE_LPCOPEN</value>
+		</setting>
+		<setting id="all.compiler.opt" buildType="Release">
+			<value>-Os</value>
+		</setting>
+		<setting id="assembler.c.header">
+			<value>Redlib</value>
+		</setting>
+		<setting id="compiler.c.header">
+			<value>Redlib</value>
+		</setting>
+		<setting name="lpc_board_nxp_lpcxpresso_4337_incdir" id="compiler.inc">
+			<value>${workspace_loc:/lpc_chip_43xx/inc}</value>
+			<value>${workspace_loc:/${ProjName}/inc}</value>
+		</setting>
+		<setting id="assembler.fp">
+			<value>com.crt.advproject.gas.fpu.fpv4</value>
+		</setting>
+		<setting id="compiler.c.fp">
+			<value>com.crt.advproject.gcc.fpu.fpv4</value>
+		</setting>
+		<setting id="cpp.compiler.c.fp">
+			<value>com.crt.advproject.cpp.fpu.fpv4</value>
+		</setting>
+		<setting id="all.compiler.flags">
+			<value>-fsingle-precision-constant</value>
+		</setting>
+		<setting id="linker.fp">
+			<value>com.crt.advproject.link.fpu.fpv4</value>
+		</setting>
+		<setting id="compiler.def">
+			<value>CORE_M4</value>
+		</setting>
+	</cfglist>
+</project>

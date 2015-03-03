@@ -1,0 +1,13 @@
+<LPCOpenCfg>
+	<symbol name="varExampleDestInc" value="example/inc"/>
+	<symbol name="varLocalIncEnable" value="${varExampleEnable}"/>
+	<template tool="xpresso" section="filelist">
+		<import src="${prjDestToRoot}/software/swim" dest="${varExampleDestInc}">
+			<include>lpc_rom8x8.h</include>
+			<include>lpc_fonts.h</include>
+		</import>
+		<import src="${prjDestToRoot}/software/swim" dest="${varExampleDestSrc}">
+			<include>lpc_rom8x8.c</include>
+		</import>
+	</template>
+</LPCOpenCfg>

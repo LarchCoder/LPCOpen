@@ -1,0 +1,14 @@
+<LPCOpenCfg>
+	<symbol name="varFatfsMCIEnable" value="${varFatfsEnable}"/>
+	<module name="fatfs"/>
+	<module name="freertos"/>
+	<template tool="xpresso" section="import" name="${varExampleFullName}_src">
+		<include>*.h</include>
+	</template>
+	<template tool="xpresso" section="import" name="${varLwIPEnable}_lwip_src1">
+		<copy>arch/sys_arch_freertos.c</copy>
+	</template>
+	<template tool="xpresso" section="import" name="${varLwIPEnable}_lwip_inc1">
+		<copy>arch/sys_arch.h</copy>
+	</template>
+</LPCOpenCfg>

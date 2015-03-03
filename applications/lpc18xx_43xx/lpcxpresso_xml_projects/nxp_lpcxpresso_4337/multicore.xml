@@ -1,0 +1,15 @@
+<workspace xmlns:xi="http://www.w3.org/2001/XInclude">
+	<prjgroup name="libchip">
+		<project description="libchip/libchip/libchip.xml"/>
+	</prjgroup>
+	<prjgroup name="libboard">
+		<project description="libboard/libboard/libboard.xml"/>
+	</prjgroup>
+	<prjgroup name="multicore">
+		<project description="multicore/libchip_m0/libchip_m0.xml"/>
+		<project description="multicore/libboard_m0/libboard_m0.xml"/>
+		<project description="multicore/mc_sa_blinky_m4/mc_sa_blinky_m4.xml"/>
+		<project description="multicore/mc_sa_blinky_m0app/mc_sa_blinky_m0app.xml"/>
+	</prjgroup>
+</workspace>
+

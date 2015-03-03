@@ -1,0 +1,6 @@
+<workspace xmlns:xi="http://www.w3.org/2001/XInclude">
+	<project description="lib_lpcspifi_M0.xml"/>
+	<project description="lib_lpcspifi_M3.xml"/>
+	<project description="lib_lpcspifi_M4F.xml"/>
+	<project description="lib_lpcspifi_M4F_hard.xml"/>
+</workspace>

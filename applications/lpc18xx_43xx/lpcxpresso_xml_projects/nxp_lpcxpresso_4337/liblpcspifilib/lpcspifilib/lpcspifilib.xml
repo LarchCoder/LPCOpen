@@ -1,0 +1,8 @@
+<project xmlns:xi="http://www.w3.org/2001/XInclude" type="Static library" name="lib_lpcspifilib" chip="${varChipPart}" vendor="NXP">
+	<import src="../../../../../../software/lpcspifilib/lib/LPCXpresso" dest="lib">
+		<include>*.a</include>
+	</import>
+	<import src="../../../../../../software/lpcspifilib/inc" dest="inc">
+		<include>*.h</include>
+	</import>
+</project>

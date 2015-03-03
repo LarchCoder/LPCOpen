@@ -1,0 +1,79 @@
+<project xmlns:xi="http://www.w3.org/2001/XInclude" type="Basic C project" name="multicore_mc_sa_blinky_m4" chip="LPC4337" vendor="NXP">
+	<filelist name="nxp_lpcxpresso_4337_multicore_mc_sa_blinky_m4">
+		<import name="nxp_lpcxpresso_4337_multicore_mc_sa_blinky_m4_src" src="../../../../../../applications/lpc18xx_43xx/examples/multicore/sa_blinky_m4" dest="example/src">
+			<include>*.c</include>
+		</import>
+		<import name="nxp_lpcxpresso_4337_multicore_mc_sa_blinky_m4_inc" src="../../../../../../applications/lpc18xx_43xx/examples/multicore/sa_blinky_m4" dest="example/inc">
+			<include>*.h</include>
+		</import>
+		<import name="nxp_lpcxpresso_4337_multicore_mc_sa_blinky_m4_doc" src="../../../../../../applications/lpc18xx_43xx/examples/multicore/sa_blinky_m4" dest="example">
+			<include>*.dox</include>
+			<include>*.txt</include>
+		</import>
+		<import name="nxp_lpcxpresso_4337_multicore_mc_sa_blinky_m4_sysinit" src="../../../../../../applications/lpc18xx_43xx/startup_code" dest="example/src">
+			<copy>sysinit.c</copy>
+		</import>
+		<import name="nxp_lpcxpresso_4337_multicore_mc_sa_blinky_m4_startup" src="../../../../../../applications/lpc18xx_43xx/startup_code" dest="example/src">
+			<copy>cr_startup_lpc43xx.c</copy>
+		</import>
+		<import src="../../../../../../applications/lpc18xx_43xx/examples/multicore/common" dest="example/inc">
+			<include>*.h</include>
+		</import>
+		<import src="../../../../../../applications/lpc18xx_43xx/examples/multicore/common" dest="example/src">
+			<include>*.c</include>
+		</import>
+	</filelist>
+	<cfglist name="nxp_lpcxpresso_4337_multicore_mc_sa_blinky_m4">
+		<setting name="nxp_lpcxpresso_4337_multicore_mc_sa_blinky_m4_cdef" id="compiler.def">
+			<value>__USE_LPCOPEN</value>
+		</setting>
+		<setting id="assembler.c.header">
+			<value>Redlib</value>
+		</setting>
+		<setting id="compiler.c.header">
+			<value>Redlib</value>
+		</setting>
+		<setting id="linker.library.type">
+			<value>Redlib (nohost)</value>
+		</setting>
+		<setting id="linker.libs">
+			<value>lpc_board_nxp_lpcxpresso_4337</value>
+			<value>lpc_chip_43xx</value>
+		</setting>
+		<setting name="nxp_lpcxpresso_4337_multicore_mc_sa_blinky_m4_incdir" id="compiler.inc">
+			<value>${workspace_loc:/lpc_chip_43xx/inc}</value>
+			<value>${workspace_loc:/lpc_board_nxp_lpcxpresso_4337/inc}</value>
+			<value>${workspace_loc:/${ProjName}/example/inc}</value>
+		</setting>
+		<setting id="linker.paths" buildType="Debug">
+			<value>${workspace_loc:/lpc_chip_43xx/Debug}</value>
+			<value>${workspace_loc:/lpc_board_nxp_lpcxpresso_4337/Debug}</value>
+		</setting>
+		<setting id="linker.paths" buildType="Release">
+			<value>${workspace_loc:/lpc_chip_43xx/Release}</value>
+			<value>${workspace_loc:/lpc_board_nxp_lpcxpresso_4337/Release}</value>
+		</setting>
+		<requires>
+			<value>lpc_chip_43xx</value>
+			<value>lpc_board_nxp_lpcxpresso_4337</value>
+		</requires>
+		<setting id="assembler.fp">
+			<value>com.crt.advproject.gas.fpu.fpv4</value>
+		</setting>
+		<setting id="compiler.c.fp">
+			<value>com.crt.advproject.gcc.fpu.fpv4</value>
+		</setting>
+		<setting id="cpp.compiler.c.fp">
+			<value>com.crt.advproject.cpp.fpu.fpv4</value>
+		</setting>
+		<setting id="all.compiler.flags">
+			<value>-fsingle-precision-constant</value>
+		</setting>
+		<setting id="linker.fp">
+			<value>com.crt.advproject.link.fpu.fpv4</value>
+		</setting>
+		<setting id="compiler.def">
+			<value>CORE_M4</value>
+		</setting>
+	</cfglist>
+</project>

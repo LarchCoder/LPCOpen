@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<ProjectWorkspace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="project_mpw.xsd">
+
+  <SchemaVersion>1.0</SchemaVersion>
+
+  <Header>### uVision Project, (C) Keil Software</Header>
+
+  <WorkspaceName>WorkSpace</WorkspaceName>
+
+  <project>
+    <PathAndName>..\..\..\..\software\lpc_core\lpc_chip\chip_18xx_43xx\lib_lpc_chip_43xx.uvprojx</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
+    <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
+  </project>
+
+  <project>
+    <PathAndName>..\..\..\..\software\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337\lib_lpc_board_nxp_lpcxpresso_4337.uvprojx</PathAndName>
+    <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
+  </project>
+
+  <project>
+    <PathAndName>.\misc\clock_apis\clock_apis.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\misc\otp_funcs\otp_funcs.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\misc\pmc_states\pmc_states.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\misc\lcd_helloworld\lcd_helloworld.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\misc\trimpot\trimpot.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\misc\iox_sensor\iox_sensor.uvprojx</PathAndName>
+  </project>
+
+</ProjectWorkspace>

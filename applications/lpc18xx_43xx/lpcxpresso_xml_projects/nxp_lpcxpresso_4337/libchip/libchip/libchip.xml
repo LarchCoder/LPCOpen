@@ -1,0 +1,73 @@
+<project xmlns:xi="http://www.w3.org/2001/XInclude" type="Static library" name="lpc_chip_43xx" chip="LPC4337" vendor="NXP">
+	<filelist name="lpc_chip_43xx">
+		<import name="lpc_chip_43xx_src" src="../../../../../../software/lpc_core/lpc_chip/chip_18xx_43xx" dest="src">
+			<include>*.c</include>
+		</import>
+		<import name="lpc_chip_43xx_inc" src="../../../../../../software/lpc_core/lpc_chip/chip_18xx_43xx" dest="inc">
+			<include>*.h</include>
+		</import>
+		<import name="lpc_chip_43xx_inc1" src="../../../../../../software/lpc_core/lpc_chip/chip_18xx_43xx" dest="inc">
+			<copy>../chip_common/lpc_types.h</copy>
+			<copy>../chip_common/ring_buffer.h</copy>
+			<copy>../chip_common/fpu_init.h</copy>
+			<copy>../chip_common/sdmmc.h</copy>
+			<copy>../chip_common/error.h</copy>
+			<copy>../chip_common/stopwatch.h</copy>
+			<copy>../chip_common/iap.h</copy>
+		</import>
+		<import name="lpc_chip_43xx_src1" src="../../../../../../software/lpc_core/lpc_chip/chip_18xx_43xx" dest="src">
+			<copy>../chip_common/ring_buffer.c</copy>
+			<copy>../chip_common/fpu_init.c</copy>
+		</import>
+		<import src="../../../../../..">
+			<include>version.txt</include>
+		</import>
+		<import src="../../../../../../software/CMSIS/CMSIS/Include" dest="inc">
+			<include>core_cm4.h</include>
+			<include>core_cmFunc.h</include>
+			<include>core_cmInstr.h</include>
+			<include>core_cm4_simd.h</include>
+		</import>
+		<import src="../../../../../../software/lpc_core/lpc_chip/chip_18xx_43xx/config_43xx" dest="inc">
+			<include>*.h</include>
+		</import>
+	</filelist>
+	<cfglist name="lpc_chip_43xx">
+		<setting name="lpc_chip_43xx_cdef" id="compiler.def">
+			<value>__USE_LPCOPEN</value>
+		</setting>
+		<setting name="lpc_chip_43xx_incdir" id="compiler.inc">
+			<value>${workspace_loc:/${ProjName}/inc}</value>
+		</setting>
+		<setting id="all.compiler.opt" buildType="Release">
+			<value>-Os</value>
+		</setting>
+		<setting id="assembler.c.header">
+			<value>Redlib</value>
+		</setting>
+		<setting id="compiler.c.header">
+			<value>Redlib</value>
+		</setting>
+		<setting id="assembler.fp">
+			<value>com.crt.advproject.gas.fpu.fpv4</value>
+		</setting>
+		<setting id="compiler.c.fp">
+			<value>com.crt.advproject.gcc.fpu.fpv4</value>
+		</setting>
+		<setting id="cpp.compiler.c.fp">
+			<value>com.crt.advproject.cpp.fpu.fpv4</value>
+		</setting>
+		<setting id="all.compiler.flags">
+			<value>-fsingle-precision-constant</value>
+		</setting>
+		<setting id="linker.fp">
+			<value>com.crt.advproject.link.fpu.fpv4</value>
+		</setting>
+		<setting id="compiler.def">
+			<value>CORE_M4</value>
+		</setting>
+		<import src="../../../../../../software/lpc_core/lpc_chip/chip_18xx_43xx/../usbd_rom" dest="inc/usbd">
+			<include>*.h</include>
+		</import>
+	</cfglist>
+</project>

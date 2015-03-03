@@ -1,0 +1,80 @@
+<project xmlns:xi="http://www.w3.org/2001/XInclude" type="Basic C project" name="misc_trimpot" chip="LPC4337" vendor="NXP">
+	<filelist name="nxp_lpcxpresso_4337_misc_trimpot">
+		<import name="nxp_lpcxpresso_4337_misc_trimpot_src" src="../../../../../../applications/lpc18xx_43xx/examples/misc/trimpot" dest="example/src">
+			<include>*.c</include>
+		</import>
+		<import name="nxp_lpcxpresso_4337_misc_trimpot_inc" src="../../../../../../applications/lpc18xx_43xx/examples/misc/trimpot" dest="example/inc">
+			<include>*.h</include>
+		</import>
+		<import name="nxp_lpcxpresso_4337_misc_trimpot_doc" src="../../../../../../applications/lpc18xx_43xx/examples/misc/trimpot" dest="example">
+			<include>*.dox</include>
+			<include>*.txt</include>
+		</import>
+		<import name="nxp_lpcxpresso_4337_misc_trimpot_sysinit" src="../../../../../../applications/lpc18xx_43xx/startup_code" dest="example/src">
+			<copy>sysinit.c</copy>
+		</import>
+		<import name="nxp_lpcxpresso_4337_misc_trimpot_startup" src="../../../../../../applications/lpc18xx_43xx/startup_code" dest="example/src">
+			<copy>cr_startup_lpc43xx.c</copy>
+		</import>
+		<import src="../../../../../../software/swim" dest="example/inc">
+			<include>lpc_rom8x8.h</include>
+			<include>lpc_fonts.h</include>
+		</import>
+		<import src="../../../../../../software/swim" dest="example/src">
+			<include>lpc_rom8x8.c</include>
+		</import>
+	</filelist>
+	<cfglist name="nxp_lpcxpresso_4337_misc_trimpot">
+		<setting name="nxp_lpcxpresso_4337_misc_trimpot_cdef" id="compiler.def">
+			<value>__USE_LPCOPEN</value>
+		</setting>
+		<setting id="assembler.c.header">
+			<value>Redlib</value>
+		</setting>
+		<setting id="compiler.c.header">
+			<value>Redlib</value>
+		</setting>
+		<setting id="linker.library.type">
+			<value>Redlib (nohost)</value>
+		</setting>
+		<setting id="linker.libs">
+			<value>lpc_board_nxp_lpcxpresso_4337</value>
+			<value>lpc_chip_43xx</value>
+		</setting>
+		<setting name="nxp_lpcxpresso_4337_misc_trimpot_incdir" id="compiler.inc">
+			<value>${workspace_loc:/lpc_chip_43xx/inc}</value>
+			<value>${workspace_loc:/lpc_board_nxp_lpcxpresso_4337/inc}</value>
+			<value>${workspace_loc:/${ProjName}/example/inc}</value>
+		</setting>
+		<setting id="linker.paths" buildType="Debug">
+			<value>${workspace_loc:/lpc_chip_43xx/Debug}</value>
+			<value>${workspace_loc:/lpc_board_nxp_lpcxpresso_4337/Debug}</value>
+		</setting>
+		<setting id="linker.paths" buildType="Release">
+			<value>${workspace_loc:/lpc_chip_43xx/Release}</value>
+			<value>${workspace_loc:/lpc_board_nxp_lpcxpresso_4337/Release}</value>
+		</setting>
+		<requires>
+			<value>lpc_chip_43xx</value>
+			<value>lpc_board_nxp_lpcxpresso_4337</value>
+		</requires>
+		<setting id="assembler.fp">
+			<value>com.crt.advproject.gas.fpu.fpv4</value>
+		</setting>
+		<setting id="compiler.c.fp">
+			<value>com.crt.advproject.gcc.fpu.fpv4</value>
+		</setting>
+		<setting id="cpp.compiler.c.fp">
+			<value>com.crt.advproject.cpp.fpu.fpv4</value>
+		</setting>
+		<setting id="all.compiler.flags">
+			<value>-fsingle-precision-constant</value>
+		</setting>
+		<setting id="linker.fp">
+			<value>com.crt.advproject.link.fpu.fpv4</value>
+		</setting>
+		<setting id="compiler.def">
+			<value>CORE_M4</value>
+		</setting>
+	</cfglist>
+</project>

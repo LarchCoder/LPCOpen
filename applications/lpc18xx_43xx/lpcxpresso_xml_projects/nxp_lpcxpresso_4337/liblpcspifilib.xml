@@ -1,0 +1,12 @@
+<workspace xmlns:xi="http://www.w3.org/2001/XInclude">
+	<prjgroup name="libchip">
+		<project description="libchip/libchip/libchip.xml"/>
+	</prjgroup>
+	<prjgroup name="libboard">
+		<project description="libboard/libboard/libboard.xml"/>
+	</prjgroup>
+	<prjgroup name="liblpcspifilib">
+		<project description="liblpcspifilib/lpcspifilib/lpcspifilib.xml"/>
+	</prjgroup>
+</workspace>
+

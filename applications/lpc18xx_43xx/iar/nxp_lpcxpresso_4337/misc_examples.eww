@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\..\..\..\..\software\lpc_core\lpc_chip\chip_18xx_43xx\lib_lpc_chip_43xx.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\..\..\..\..\software\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337\lib_lpc_board_nxp_lpcxpresso_4337.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\misc\clock_apis\clock_apis.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\misc\otp_funcs\otp_funcs.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\misc\pmc_states\pmc_states.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\misc\lcd_helloworld\lcd_helloworld.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\misc\trimpot\trimpot.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\misc\iox_sensor\iox_sensor.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

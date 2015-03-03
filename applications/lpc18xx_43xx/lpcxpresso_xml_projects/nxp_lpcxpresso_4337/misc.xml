@@ -1,0 +1,17 @@
+<workspace xmlns:xi="http://www.w3.org/2001/XInclude">
+	<prjgroup name="libchip">
+		<project description="libchip/libchip/libchip.xml"/>
+	</prjgroup>
+	<prjgroup name="libboard">
+		<project description="libboard/libboard/libboard.xml"/>
+	</prjgroup>
+	<prjgroup name="misc">
+		<project description="misc/clock_apis/clock_apis.xml"/>
+		<project description="misc/otp_funcs/otp_funcs.xml"/>
+		<project description="misc/pmc_states/pmc_states.xml"/>
+		<project description="misc/lcd_helloworld/lcd_helloworld.xml"/>
+		<project description="misc/iox_sensor/iox_sensor.xml"/>
+		<project description="misc/trimpot/trimpot.xml"/>
+	</prjgroup>
+</workspace>
+
